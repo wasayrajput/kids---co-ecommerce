@@ -1,0 +1,34 @@
+#page-header{
+    background-image: var(--b1-image);
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    flex-direction: column;
+    padding: 40px;
+    margin-top: 90px;
+}
+
+
+
+
+#pagination{
+    text-align: center;
+}
+
+#pagination a{
+    text-decoration: none;
+    background-color: #00AFEF;
+    padding: 15px 20px;
+    margin-left: 5px;
+    border-radius: 4px;
+    color: white;
+    font-weight: 600;
+}
+
+#pagination a i{
+    font-size: 16px;
+    font-weight: 600;
+}
