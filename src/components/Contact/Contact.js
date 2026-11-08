@@ -10,8 +10,13 @@ import { FaMapMarkedAlt } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa6";
 import { FaClock } from "react-icons/fa";
+import { useEffect } from 'react'
 
 const Contact = () => {
+
+    useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const b21Style = {
     '--b21-image': `url(${b21})`
@@ -33,19 +38,19 @@ const Contact = () => {
             <h3>Head Office</h3>
             <div>
                 <li>
-                    <FaMapMarkedAlt className='icons' />
-                    <p>Hayat plaza basement, main bazar yateem khana</p>
+                    <FaMapMarkedAlt className='icons2' />
+                    <p>Shop #8 Ali plaza, Main bazar yateem khana</p>
                 </li>
                 <li>
-                    <FaEnvelope className='icons' />
-                    <p>happykids@example.com</p>
+                    <FaEnvelope className='icons2' />
+                    <p>kids&co@example.com</p>
                 </li>
                 <li>
-                    <FaPhone className='icons' />
-                    <p>happykids@example.com</p>
+                    <FaPhone className='icons2' />
+                    <p>+92 301 4907544 / +92 309 6308146</p> 
                 </li>
                 <li>
-                    <FaClock className='icons'/>
+                    <FaClock className='icons2'/>
                     <p>11:00 AM - 10:00 PM, 7 days a weak</p>
                 </li>
             </div>
@@ -76,12 +81,12 @@ const Contact = () => {
 
           <div>
             <img src={p2} alt=""></img>
-            <p><span>Abdul Razzaq </span>Senior Marketing Manager <br/> +92 304 3504791 <br/> abdul@happykids.com</p>
+            <p><span>Abdul Razzaq </span>Senior Marketing Manager <br/> +92 301 4907544 <br/> abdul@happykids.com</p>
           </div> 
 
           <div>
             <img src={p3} alt=""></img>
-            <p><span>Muhammad Hafeez </span>Senior Marketing Manager <br/> +92 304 1234567 <br/> hafeez@happykids.com</p>
+            <p><span>Abdul Wasay </span>Senior Marketing Manager <br/> +92 309 6308146 <br/> wasay@happykids.com</p>
           </div>  
         </div>
     </section>

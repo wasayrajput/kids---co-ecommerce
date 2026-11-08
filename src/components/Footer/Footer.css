@@ -42,14 +42,14 @@ footer .follow{
     margin-top: 20px;
 }
 
-.icons{
+.iccons{
     color: #465b52;
     font-size: 20px;
     cursor: pointer;
     margin-right: 10px;
 }
 
-.icons:hover{
+.iccons:hover{
     color: #00AFEF;
 }
 

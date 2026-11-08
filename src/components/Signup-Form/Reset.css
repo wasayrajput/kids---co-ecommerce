@@ -1,0 +1,118 @@
+.reset-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
+    background-color: #f0f2f5;
+}
+
+.reset-card {
+    text-align: center;
+    background-color: #ffffff;
+    border: 1px solid #00AFEF;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    margin-top: 65px;
+}
+
+.reset-card h2 {
+    color: #00AFEF;
+    font-size: 30px;
+    margin-top: 0;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2)
+}
+
+.reset-card p {
+    text-align: center;
+    color: #636e72;
+    font-size: 14px;
+}
+
+.reset-card label{
+  display: flex;
+  /* margin-bottom: -7px; */
+  margin-top: 15px;
+  font-weight: 600;
+  color: black;
+  font-size: 14px;
+}
+
+.reset-form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Inputs styling */
+.reset-form input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #00AFEF;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+
+/* OTP Specific Styling */
+.reset-form input[placeholder*="OTP"] {
+    /* letter-spacing: 5px; */
+    /* text-align: center; */
+    /* font-weight: bold; */
+    font-size: 12px;
+    border: 1px solid #74b9ff;
+    /* background-color: #f9fbff; */
+}
+
+/* Button styling */
+.reset-btn {
+    width: 100%;
+    padding: 14px;
+    margin-top: 30px;
+    background-color: #00AFEF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.reset-btn:hover {
+   background-color: #009ed8;
+}
+
+/* .reset-btn:active {
+    transform: scale(0.98);
+} */
+
+/* Link back to login */
+/* .back-to-login {
+    display: inline-block;
+    margin-top: 20px;
+    color: #1877f2;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.back-to-login:hover {
+    text-decoration: underline;
+} */
+
+.errors{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.form-error{
+    color:red;
+    font-size: 12px;
+    margin-bottom: 0px;
+}

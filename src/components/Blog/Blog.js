@@ -10,9 +10,14 @@ import b5 from './blog/b5.jpg'
 
 import { Link } from 'react-router-dom'
 import { FaArrowRight } from "react-icons/fa";
+import { useEffect } from 'react'
 
 
 const Blog = () => {
+
+    useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const b19Style = {
     '--b19-image': `url(${b19})`
@@ -21,7 +26,7 @@ const Blog = () => {
   return (
     <div>
 
-      <section class="blog-header" style={b19Style}>
+      <section className="blog-header" style={b19Style}>
         
         <h2>#readmore</h2>
         <p>Read all case studies about our products!</p>
@@ -32,7 +37,7 @@ const Blog = () => {
             <div className="blog-img">
                 <img src={b1} alt=""></img>
             </div>
-            <div class="blog-details">
+            <div className="blog-details">
                 <h4>The Cotton-Jersey Zip-Up Hoodie</h4>
                 <p>Kickstarter man braid godard coloring book. Reclette waistcoat selfies yr wolf chartreuse hexagon irony, godard...</p>
                 <Link to="#">CONTINUE READING</Link>
@@ -65,10 +70,10 @@ const Blog = () => {
         </div>
 
         <div className="blog-box">
-            <div class="blog-img">
+            <div className="blog-img">
                 <img src={b4} alt=""></img>
             </div>
-            <div class="blog-details">
+            <div className="blog-details">
                 <h4>Runway-Inspired Trends</h4>
                 <p>Kickstarter man braid godard coloring book. Reclette waistcoat selfies yr wolf chartreuse hexagon irony, godard...</p>
                 <Link to="#">CONTINUE READING</Link>

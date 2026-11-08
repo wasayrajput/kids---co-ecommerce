@@ -53,17 +53,17 @@ const Footer = ({hideNewsletter}) => {
         <div className="col">
             <img className="logo" src={logo} alt=""></img>
             <h4>Contact</h4>
-            <p><strong>Address:</strong> Hayat plaza basement, main bazar yateem khana</p>
-            <p><strong>Phone:</strong> +92 301 4907544 / +92 302 4068891</p>
+            <p><strong>Address:</strong> Shop #8 Ali plaza, Main bazar yateem khana</p>
+            <p><strong>Phone:</strong> +92 301 4907544 / +92 309 6308146</p>
             <p><strong>Hours:</strong> 11:00 AM - 10:00 PM, 7 days a weak</p>
             <div className="follow">
                 <h4>Follow Us</h4>
                 <div className="icon">
-                    <FaFacebook className='icons'/>
-                    <FaTwitterSquare className='icons'/>
-                    <FaInstagram className='icons'/>
-                    <FaPinterest className='icons'/>
-                    <FaYoutube className='icons'/>
+                    <FaFacebook className='iccons'/>
+                    <FaTwitterSquare className='iccons'/>
+                    <FaInstagram className='iccons'/>
+                    <FaPinterest className='iccons'/>
+                    <FaYoutube className='iccons'/>
                 </div>
             </div>
         </div>
@@ -98,7 +98,7 @@ const Footer = ({hideNewsletter}) => {
         </div>
 
         <div className="copyright">
-            <p>© 2025, All rights are reserved by Kids&Co</p>
+            <p>© 2026, All rights are reserved by Kids&Co</p>
         </div>
     </footer>
 

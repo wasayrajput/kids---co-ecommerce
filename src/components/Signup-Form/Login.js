@@ -1,109 +1,105 @@
-import React, { useState } from 'react'
-import './Login.css'
-import { useFormik } from 'formik';
-import { login } from './userSlice';
-import * as Yup from 'yup'
+import React, { useState } from 'react';
+import axios from 'axios';
+import './Login.css';
 import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { signup } from './userSlice'; 
+import { useNavigate, Link } from 'react-router-dom';
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
+import { toast } from 'react-toastify';
 
+const loginSchema = Yup.object({
+    email: Yup.string().email("Invalid email").required("Email is required"),
+    password: Yup.string().required("Password is required"),
+});
 
-export const signupSchema = Yup.object({
-    name: Yup.string().min(3).required('please enter your name'),
-    email: Yup.string().email('please enter valid email').required('please enter your email'),
-    password: Yup.string().required('please enter your password')
-})
-
-
-const initialValues = {
-  name:'',
-  email:'',
-  password:''
-}
 
 const Login = () => {
-
-    const {values, handleBlur, handleChange, handleSubmit, errors, touched} = useFormik({
-    initialValues,
-    validationSchema: signupSchema,
-
-    onSubmit: (values, actions) => {
-     console.log(values);
-    //  localStorage.setItem('name', values.name);
-     
-
-     dispatch(
-        login({
-          name: values.name,
-          email: values.email,
-          password: values.password,
-          loggedIn: true,
-        })
-      );
-
-      actions.resetForm();
-      navigate('/');
-     
-    }
-  });
-
-
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-  
+    const { values, errors, touched, handleBlur, handleChange, handleSubmit } = useFormik({
+    initialValues: {
+        email: '',
+        password: ''
+    },
+    validationSchema: loginSchema,
 
-  return (
-    <div className='App'>
-        <form className='signup-form' onSubmit={handleSubmit}>
-        <p>Sign Up</p>
+    onSubmit: async (values, actions) => {
+        try {
+            const res = await axios.post('http://localhost:5005/users/login', {
+                email: values.email,
+                password: values.password
+            });
+            
+            const { token, user } = res.data;
 
-        <label>Name</label>
-        <input 
-         type='text'
-         placeholder='name' 
-         name='name' 
-         value={values.name}
-         onBlur={handleChange}
-         onChange={(e) => {setName(e.target.value); handleChange(e)}}
+            // dispatch(signup({ ...user, token })); 
+            
+            dispatch(signup({
+                                username: user.username,
+                                email: user.email,
+                                token: token,
+                                type: user.type,
+                                loggedIn: true
+                            }));
+            
+            toast.success("Welcome Back! Login Successful. 🎉");
+            navigate('/'); 
 
-        ></input>
-        <div className='errors'>
-            {errors.name && touched.name ? <p className='form-error'>{errors.name}</p> : ""}
+        } catch (err) {
+            const errorMsg = err.response?.data?.message || "Invalid Credentials";
+            toast.error(errorMsg);
+        }
+    }
+});
+
+
+    return (
+        <div className="login-wrapper">
+            <div className="login-card">
+                <h2>Login</h2>
+                <p>Welcome 
+                    back! Please enter your details.</p>
+                
+                <form className='login-form' onSubmit={handleSubmit}>
+                    <label>Email</label>
+                    <input 
+                        type="email" 
+                        placeholder="Email Address"
+                        name='email'
+                        value={values.email}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                    />
+                     <div className='errors'>
+                        {errors.email && touched.email ? <p className="form-error">{errors.email}</p> : null}
+                     </div>
+
+                    <label>Password</label>
+                    <input 
+                        type="password" 
+                        placeholder="Password" 
+                        name='password'
+                        value={values.password}
+                        onChange={handleChange} 
+                        onBlur={handleBlur}
+                    />
+                    <div className='errors'>
+                        {errors.password && touched.password ? <p className="form-error">{errors.password}</p> : null}
+                    </div>
+
+                    <button type="submit" className="login-btn">Login</button>
+                </form>
+
+                <div className="login-footer">
+                    <Link to="/forgot-password">Forgot Password?</Link>
+                    <p>Don't have an account? <Link to="/signup">Sign Up</Link></p>
+                </div>
+            </div>
         </div>
+    );
+};
 
-        <label>Email</label>
-        <input 
-         type='email' 
-         placeholder='e-mail' 
-         name='email' 
-         value={values.email} 
-         onBlur={handleChange} 
-         onChange={(e) => {setEmail(e.target.value); handleChange(e)}}
-         ></input>
-        <div className='errors'>
-            {errors.email && touched.email ? <p className='form-error'>{errors.email}</p> : ""}
-        </div>
-
-        <label>Password</label>
-        <input 
-         type='password' 
-         placeholder='password' 
-         name='password' 
-         value={values.password} 
-         onBlur={handleBlur} 
-         onChange={(e) => {setPassword(e.target.value); handleChange(e)}}></input>
-        <div className='errors'>
-            {errors.password && touched.password ? <p className='form-error'>{errors.password}</p> : ''}
-        </div>
-
-        <button type='submit'>Submit</button>
-      </form>
-    </div>
-  )
-}
-
-export default Login
+export default Login;

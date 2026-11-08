@@ -1,0 +1,337 @@
+.task-container {
+    padding: 40px;
+    margin: 90px auto;
+    margin-bottom: 175px;
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.task-header span{
+    color: #00AFEF;
+}
+
+.btn-add-task {
+    background-color: #00AFEF;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+.btn-add-task:hover {
+    background-color: #009ed8;
+}
+
+.btn-add-task .add-btn{
+    color: white;
+    font-size: 20px;
+}
+
+/* Table Styling */
+.table-wrapper {
+    overflow-x: auto;
+    background: white;
+    /* border-radius: 8px; */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px ;
+}
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    border: 1px solid #00AFEF;
+    border-bottom: 1px solid #00AFEF;
+}
+
+.custom-table td{
+    padding: 15px;
+    border-bottom: 1px solid #00AFEF;
+    /* ye wala */
+    /* vertical-align: middle; */
+
+}
+
+.custom-table th {
+    background-color: #00AFEF;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 15px;
+}
+
+.custom-table th:hover{
+    background-color: #009ed8;
+}
+
+
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    border: 2px solid #00AFEF;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-card h3 {
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+}
+
+/* Input Styles - Matching SignUp */
+.modal-card label {
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: -5px;
+}
+
+.modal-card input, .modal-card select {
+    padding: 10px;
+    border: 1px solid #00AFEF;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.form-error {
+    color: #d9534f;
+    font-size: 12px;
+    text-align: left;
+    margin-top: -5px;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.modal-actions button[type="submit"] {
+    background: #00AFEF;
+    color: white;
+    border: none;
+    padding: 15px 39px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-actions button[type="submit"]:hover{
+    background-color: #009ed8;
+    box-shadow: 0 5px 15px rgba(110, 142, 251, 0.3);
+}
+
+.modal-actions button[type="button"] {
+    background: #7c7c7c;
+    color: white;
+    border: none;
+    padding: 15px 39px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-actions button[type="button"]:hover{
+    background: #5a5a5a;
+    box-shadow: 0 5px 15px rgba(110, 142, 251, 0.3);
+}
+
+.delete-link {
+    color: white;
+    background: #dc3545;
+    border: none;
+    cursor: pointer;
+    /* font-weight: bold; */
+    padding: 10px;
+    border-radius: 6px;
+    transition: 0.3s;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.delete-link:hover{
+    background: #cc1e2f
+}
+
+.edit-link {
+    color: #007bff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.edit-link:hover {
+    text-decoration: underline;
+}
+
+.edit-btn-custom {
+    color: white;
+    background: #00AFEF;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 6px;
+    transition: 0.3s;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.edit-btn-custom:hover {
+    background: #008ec2;
+    box-shadow: 0 2px 8px rgba(0, 175, 239, 0.3);
+    transition: 0.3s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Pagination Styling */
+.pagination-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #00AFEF;
+    border: 1px solid #00AFEF;
+    border-top: none;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    font-family: sans-serif;
+}
+
+.pagination-info {
+    color: white;
+    font-size: 14px;
+}
+
+.pagination-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.pagi-btn {
+    padding: 8px 16px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.pagi-btn:hover:not(:disabled) {
+    background-color: white;
+    color: #00AFEF;
+}
+
+.pagi-btn:disabled {
+    border-color: white;
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+.page-number {
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
+
+
+
+
+
+
+
+.search-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #00AFEF;
+    border-radius: 8px;
+}
+
+.search-input {
+    width: 100%;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.search-input:focus {
+    /* border-color:2px solid #009ed8; */
+    box-shadow: 0 2px 8px rgba(0,123,255,0.2);
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid #009ed8;
+}
+
+.clear-search {
+    position: absolute;
+    right: 10px;
+    top: 45%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #999;
+    cursor: pointer;
+}
+
+.clear-search:hover {
+    color: #333;
+}

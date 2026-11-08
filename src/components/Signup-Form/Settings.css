@@ -1,0 +1,109 @@
+.settings-page {
+    background-color: #ffffff;
+    border: 1px solid #00AFEF;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin:auto;
+    margin-top: 65px;
+    margin-bottom: 65px;
+}
+
+.settings-section {
+    padding: 30px;
+    border-bottom: 1px solid #00AFEF;
+}
+
+.settings-section:last-child {
+    border-bottom: none;
+}
+
+.settings-section h2 {
+    color: #00AFEF;
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-left: 4px solid #00AFEF;
+    padding-left: 15px;
+}
+
+.settings-section h3 {
+    margin-bottom: 15px;
+    color: #444;
+    font-size: 18px;
+}
+
+/* Password Inputs */
+.settings-section input {
+    margin-bottom: 15px;
+    transition: 0.3s;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #00AFEF;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+
+.settings-section button:not(.delete-acc-btn) {
+    width: 100%;
+    padding: 14px;
+    margin-top: 30px;
+    background-color: #00AFEF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 25px;
+}
+
+.settings-section button:not(.delete-acc-btn):hover {
+    background-color: #009ed8;
+}
+
+
+.danger-zone {
+    background-color: #fff5f5;
+    border: 1px solid #ffcccc;
+    border-radius: 10px;
+    padding: 25px;
+    margin-top: 10px;
+}
+
+.delete-acc-btn {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.delete-acc-btn:hover {
+    background-color: #c9302c;
+    box-shadow: 0 4px 12px rgba(217, 83, 79, 0.2);
+}
+
+.auth-btn{
+    margin-top: 10px;
+}
+
+
+.errors{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.form-error{
+    color:red;
+    font-size: 12px;
+    margin-bottom: 0px;
+}

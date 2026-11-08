@@ -5,8 +5,13 @@ import Shop1 from '../Shop1/Shop1.js'
 
 import { Link } from 'react-router-dom'
 import { FaArrowRight } from "react-icons/fa";
+import { useEffect } from 'react'
 
 const Shop = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const b1Style = {
     '--b1-image': `url(${b1})`

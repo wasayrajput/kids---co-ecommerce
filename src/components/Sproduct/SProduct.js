@@ -14,23 +14,23 @@ const SProduct = () => {
 
         <section id='prodetails' className='section-p1'>
             <div className='single-pro-image'>
-                <img src={ff1} id="MainImg"></img>
+                <img src={ff1} alt='' id="MainImg"></img>
 
                 <div className='small-img-group'>
                     <div className='small-img-col'>
-                        <img src={ff1}></img>
+                        <img src={ff1} alt=''></img>
                     </div>
 
                     <div className='small-img-col'>
-                        <img src={ff2}></img>
+                        <img src={ff2} alt=''></img>
                     </div>
 
                     <div className='small-img-col'>
-                        <img src={ff3}></img>
+                        <img src={ff3} alt=''></img>
                     </div>
 
                     <div className='small-img-col'>
-                        <img src={ff4}></img>
+                        <img src={ff4} alt=''></img>
                     </div>
                 </div>
             </div>

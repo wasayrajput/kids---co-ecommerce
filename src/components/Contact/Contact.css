@@ -61,6 +61,16 @@
     padding-right: 22px;
     color: grey;
 } */
+.icons2{
+    color: #465b52;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.icons2:hover{
+    color: #00AFEF;
+}
 
 #contact-details .details li p{
     margin: 0;

@@ -98,3 +98,141 @@ img{
 .logout h3{
     color: black;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.user-menu-container{
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.user-display-name {
+    font-size: 17px;
+    /* color: #00AFEF; */
+    font-weight: 500;
+}
+
+.user-display-name b{
+    color: #00AFEF;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.hamburger-trigger {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: transparent;
+}
+
+.hamburger-trigger:hover {
+    background: #E3E6F3;
+    transform: scale(1.05);
+}
+
+.menu-icon {
+    font-size: 18px;
+    color: #555;
+    transition: 0.3s;
+}
+
+.hamburger-trigger.active {
+    background: #00AFEF; 
+}
+
+.hamburger-trigger.active .menu-icon {
+    color: white;
+}
+
+/* Dropdown Box */
+.dropdown-menu {
+    position: fixed;
+    top: 90px;
+    right: 0;
+    background: white;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    padding: 10px;
+    width: 200px;
+    height: calc(100vh - 90px);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    animation: slideFromRight 0.3s ease-out;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.dropdown-menu a, .logout-btn {
+    text-decoration: none;
+    color: #333;
+    font-size: 17px;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: 0.3s;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dropdown-menu a:hover, 
+.logout-btn:hover {
+    color: #00AFEF;
+    background-color: #E3E6F3;
+}
+
+.logout-btn{
+    color: #ff4d4d;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.dropdown-menu {
+    
+}

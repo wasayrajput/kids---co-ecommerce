@@ -33,7 +33,7 @@ const Shop1 = () => {
 
 
            
-            <div class="pro">
+            <div className="pro">
                 <Link to='/shop/product' className='link'>
                 <img src={ff1} alt=""></img>
                 <div className="des">

@@ -9,8 +9,13 @@ import { FaRegTimesCircle } from "react-icons/fa";
 import productsff1 from '../Home/products/ff1.jpg'
 import productsff2 from '../Home/products/ff2.jpg'
 import productsff3 from '../Home/products/ff3.jpg'
+import { useEffect } from 'react'
 
 const Cart = () => {
+
+    useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
     const b20Style = {
         '--b20-image': `url(${b20})`

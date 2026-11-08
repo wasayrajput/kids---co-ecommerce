@@ -11,11 +11,17 @@ import featuresf4 from '../Home/features/f4.jpg'
 import featuresf5 from '../Home/features/f5.jpg'
 
 import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
 
 
 
 
 const About = () => {
+
+    useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
 
   const bannerStyle = {
     '--banner-image': `url(${banner})`
@@ -31,7 +37,7 @@ const About = () => {
     </section>
 
     <section id="about-head" className="section-p1">
-        <img src={a6} alt=""></img>
+        <img src={a6} alt=" "></img>
         <div>
             <h2>Who We Are?</h2>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores deleniti est nobis quisquam aliquid fugiat repellendus? Voluptates odio molestias laudantium, esse debitis reiciendis ab sint a, sunt doloremque tenetur ipsam. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit dolor tempora vitae? Eos distinctio molestiae pariatur, animi sequi quas enim consectetur maxime perspiciatis aperiam, nemo ipsa numquam rerum similique magni!</p>

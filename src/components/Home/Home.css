@@ -18,22 +18,23 @@
 }
 
 #hero button{
-    background-color:black;
+    background:linear-gradient(black, #00AFEF);
     color: #00AFEF;
     border: 0;
+    border-radius: 8px;
     padding: 14px 80px 14px 65px;
-    background-repeat: no-repeat;
     cursor: pointer;
     font-weight: 700px;
     font-size: 15px;
-    transition: 0.3 ease-in-out;
+    
 }
 
 #hero button:hover{
-  letter-spacing: 0.2rem;
-  color: #00AFEF;
-  background-color: black;
-  border-radius: black;
+  /* letter-spacing: 0.2rem; */
+  transition: 0.3 ease-in-out;
+  background:linear-gradient(#00AFEF, black);
+  /* color: black;
+  border: 1px solid black; */
   
 }
 

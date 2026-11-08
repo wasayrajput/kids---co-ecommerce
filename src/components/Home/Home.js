@@ -37,8 +37,14 @@ import b18 from './banners/b18.jpg'
 import { FaStar } from "react-icons/fa6";
 import { FaShoppingBag } from "react-icons/fa";
 import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
 
 const Home = () => {
+
+    useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
     const bannerStyle = {
         '--banner-image': `url(${banner})`
     };
@@ -110,7 +116,7 @@ const Home = () => {
         <h2>Featured Products</h2>
         <p>Summer Collection New Modren Design</p>
         <div className="pro-container">
-            <div class="pro">
+            <div className="pro">
                 <img src={ff1} alt=""></img>
                 <div className="des">
                 <span>adidas</span>
@@ -421,12 +427,12 @@ const Home = () => {
             <h3>Winter Collection -50% OFF</h3>
         </div>
 
-        <div class="banner-box banner-box2" style={b4Style}>
+        <div className="banner-box banner-box2" style={b4Style}>
             <h2>NEW FOOTWEAR COLLECTION</h2>
             <h3>SPRING / SUMMER 2025</h3>
         </div>
 
-        <div class="banner-box banner-box3" style={b18Style}>
+        <div className="banner-box banner-box3" style={b18Style}>
             <h2>T-SHIRTS</h2>
             <h3>NEW TRENDY PRINTS</h3>
         </div>
